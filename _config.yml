@@ -18,33 +18,22 @@ email: yjh6079@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  enosh-yu
+author: Enosh Yu
+# profile: One sentence introducing yourself.
 
-footer: © Taken theme
+permalink: /archivers/:title
+gems:
+ - jekyll-paginate
+ - jekyll-gist
+ - jemoji
 
 # Build settings
-markdown: kramdown
+paginate: 5
+paginate_path: "page:num"
+
 highlighter: rouge
-permalink: /:title/
+markdown: kramdown
 
-
-# html minify
-compress_html:
-  clippings: all
-  comments: all
-  endings: []
-  profile: false
-
-# Links to include in menu navigation
-# For external links add external: true
-links:
-  - title: Home
-    url: /
-  - title: Series
-    url: /series
-  - title: Tags
-    url: /tags
-  - title: About Me
-    url: /about
-
-# exclude my node related stuff
-exclude: ['Gemfile', 'Gemfile.lock', 'package.json', 'src', 'node_modules']
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
