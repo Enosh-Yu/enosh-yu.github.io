@@ -9,6 +9,7 @@ opencart2.0 부터 컴포저를 지원하기 시작했습니다. ftp를 이용�
 웹서버는 아파치를 기준으로 합니다. composer가 이미 설치되어 있는 것을 가정하고 시작합니다.
 
 DOCUMENT_ROOT 가 /var/www/html/ 일 때
+
 ```
 composer create-project opencart/opencart /var/www
 
