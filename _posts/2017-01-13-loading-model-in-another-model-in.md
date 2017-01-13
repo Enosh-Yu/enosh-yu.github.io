@@ -8,6 +8,7 @@ categories: Codeigniter
 이럴 경우에 어떻게 사용하는지 알아보기로 합니다. 코드이그나이터 2.2.X 를 기준으로 했습니다.
 
 먼저 기존에 있는 모델입니다.
+
 ```
 class M1_model extends CI_Model
 {
