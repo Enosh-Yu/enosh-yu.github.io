@@ -46,4 +46,5 @@ class M2_model extends CI_Model
 ```
 
 아래 링크를 참고했습니다. 아래 처럼했는데, 2.2.x에서는 안 되는 것 같아서 위와 같이 하니까 되더군요.
-[link](http://codeignitertricks.blogspot.kr/2009/10/loading-model-in-another-model-in.html)
+
+[참고](http://codeignitertricks.blogspot.kr/2009/10/loading-model-in-another-model-in.html)
