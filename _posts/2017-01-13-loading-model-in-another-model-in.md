@@ -9,7 +9,7 @@ categories: Codeigniter
 
 먼저 호출하려고 하는 모델입니다.
 
-```
+{% highlight ruby %}
 class M1_model extends CI_Model
 {
   function __contruct()
@@ -22,11 +22,11 @@ class M1_model extends CI_Model
     echo 'f1() called';
   }
 }
-```
+{% endhighlight %}
 
 M2_model에서 M1_model을 사용하고 싶을 때 아래와 같이 사용합니다.
 
-```
+{% highlight ruby %}
 class M2_model extends CI_Model
 {
   var $ci = null;
@@ -43,7 +43,7 @@ class M2_model extends CI_Model
     $this->ci->M1_model->f1();
   }
 }
-```
+{% endhighlight %}
 
 아래 링크를 참고했습니다. 아래 처럼했는데, 2.2.x에서는 안 되는 것 같아서 위와 같이 하니까 되더군요.
 
