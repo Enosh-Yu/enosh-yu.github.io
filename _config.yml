@@ -19,7 +19,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  enosh-yu
 author: Enosh Yu
-profile: web developer
+profile: Web Developer, 두 딸의 아빠
 
 permalink: /archivers/:title
 gems:
