@@ -10,7 +10,7 @@ opencart2.0 부터 컴포저를 지원하기 시작했습니다. ftp를 이용�
 
 DOCUMENT_ROOT 가 /var/www/html/ 일 때
 
-```
+{% highlight ruby %}
 composer create-project opencart/opencart /var/www
 
 cd /var/www
@@ -24,6 +24,6 @@ cd html
 mv config-dist.php config.php
 
 mv ./admin/config-dist.php ./admin/config.php
-```
+{% endhighlight %}
 
 사이트 접속 후 설치화면을 따라 하시면 됩니다. 설치후에는 install 디렉토리를 삭제합니다.
