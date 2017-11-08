@@ -21,6 +21,7 @@ github_username:  enosh-yu
 author: Enosh Yu
 profile: Web Developer, 두 딸의 아빠
 avatar : "/img/profile.jpg"
+disqus_shortname: enosh-yu
 
 permalink: /archivers/:title
 gems:
