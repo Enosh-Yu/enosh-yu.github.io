@@ -16,7 +16,7 @@
 title: 개발노트
 email: yjh6079@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://enosh-yu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  enosh-yu
 author: Enosh Yu
 profile: Web Developer, 두 딸의 아빠
