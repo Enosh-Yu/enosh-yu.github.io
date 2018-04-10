@@ -2,7 +2,7 @@
 layout: post
 title:  "폰갭에서 안드로이드 에뮬레이터 실행하기"
 date:   2018-04-10 12:48:00 +0900
-categories: developer, phonegap, android
+categories: phonegap
 ---
 
 폰갭 cli 명령중에서 ```phonegap emulate``` 라는 것이 있는데, 이것이 작동을 하지 않는 경우가 있는데요.
