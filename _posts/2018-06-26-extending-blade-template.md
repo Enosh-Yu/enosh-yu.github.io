@@ -94,4 +94,4 @@ section('body')
 만일 위에서 ``@overwrite`` 대신에 ``@stop``을 사용하면 ``@include``한 것이 모두 첫번째로 ``@include``한 template1과 똑같이 나오게 됩니다.
 같은 페이지 안에서 똑같은 형태의 위젯이 있는데, 형태는 비슷하고 내용이 조금씩 다른 것이 있다면 아주 유용하게 사용할 수 있을 것 같습니다.
 
-참고사이트 : https://laravel.io/forum/08-26-2015-multiple-subviews-extending-a-master-template-only-works-once(https://laravel.io/forum/08-26-2015-multiple-subviews-extending-a-master-template-only-works-once)
+참고사이트 : https://laravel.io/forum/08-26-2015-multiple-subviews-extending-a-master-template-only-works-once
