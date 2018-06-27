@@ -17,3 +17,4 @@ public: true
 * [Web Devops](https://webdevops.io/)
 * [codeanywhere](https://codeanywhere.com/)
 * [sytaxnet 자연어처리](https://github.com/tensorflow/models/tree/master/research/syntaxnet)
+* [JSON editor awesome!](https://github.com/json-editor/json-editor)
