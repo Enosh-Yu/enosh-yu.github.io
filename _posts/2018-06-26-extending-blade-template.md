@@ -29,7 +29,7 @@ index.blade.php
 @extends('master')
 @section('content')
 <div class="content">
-    <header>@overwrite 예제</header>
+    <header>overwrite 예제</header>
     <div class="row">@include('template1')</div>
     <div class="row">@include('template2')</div>
     <div class="row">@include('template3')</div>
@@ -52,11 +52,11 @@ panel.blade.php
 template1.blade.php
 {% highlight ruby %}
 @extends('panel')
-section('heading')
+@section('heading')
 <h4 class="panel-title">template1</h4>
 @overwrite
 
-section('body')
+@section('body')
 <div class="sub-content">
     template1 content
 </div>
@@ -66,11 +66,11 @@ section('body')
 template2.blade.php
 {% highlight ruby %}
 @extends('panel')
-section('heading')
+@section('heading')
 <h4 class="panel-title">template2</h4>
 @overwrite
 
-section('body')
+@section('body')
 <div class="sub-content">
     template12 content
 </div>
@@ -80,11 +80,11 @@ section('body')
 template3.blade.php
 {% highlight ruby %}
 @extends('panel')
-section('heading')
+@section('heading')
 <h4 class="panel-title">template3</h4>
 @overwrite
 
-section('body')
+@section('body')
 <div class="sub-content">
     template2 content
 </div>
