@@ -47,6 +47,7 @@ panel.blade.php
         @yield('body')
     </div>
 </div>
+{% endhighlight %}
 
 template1.blade.php
 {% highlight ruby %}
