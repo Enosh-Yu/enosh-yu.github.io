@@ -19,6 +19,7 @@ handlebars 는 백엔드, 프론트엔드 둘 다 사용이 가능한데, 여기
 설치
 ===
 >(nodejs, npm, express generator 는 설치되어 있는 것을 가정합니다.)
+
 express generator를 사용하여 아래와 같이 생성합니다.
 {% highlight ruby %}
 express --view=hbs myapp
@@ -28,3 +29,4 @@ express --view=hbs myapp
 cd myapp
 npm i express-handlebars
 {% endhighlight %}
+
