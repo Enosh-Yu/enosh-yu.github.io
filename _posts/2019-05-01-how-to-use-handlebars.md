@@ -28,7 +28,10 @@ express --view=hbs myapp
 {% highlight ruby %}
 express --hbs myapp
 {% endhighlight %}
-views 디렉토리에 error.hbs, index.hbs, layout.hbs 파일이 자동으로 생성이 됩니다.
+설치가 완료되면, views 디렉토리에 error.hbs, index.hbs, layout.hbs 파일이 자동으로 생성이 됩니다.
+
+Layout 설정
+==========
 디폴트 layout을 변경하려면 아래와 같이 추가합니다.
 {% highlight ruby %}
 #app.js
@@ -101,3 +104,10 @@ let the magic begin
 { {/extend} }
 ```
 (중괄호가 한 칸씩 띄어쓰는 걸로 되어 있는데, 붙여써야 합니다. 마크다운에서 붙여쓰니까 특수문자로 인식이 되어 나오지게 않네요-,-;;)
+
+템플릿 안에서의 변수 사용
+====================
+
+
+Built-in Helper
+===============
