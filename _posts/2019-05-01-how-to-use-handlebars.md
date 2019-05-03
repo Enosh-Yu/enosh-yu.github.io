@@ -2,7 +2,7 @@
 layout: post
 title:  "Handlebars 사용법"
 date:   2019-05-01 06:48:00 +0900
-categories: Express, Handlebars, Template
+categories: Express,Handlebars,Template
 ---
 
 nodejs 에서 많이 사용하는 템플릿 중에 handlebars 라는 것이 있습니다. express generator 에 pug와 ejs처럼 옵션으로 들어가 있습니다. (```express --hbs``` 로 프로젝트 생성) 하지만, 국내에서는 많이 사용을 하지 않는 것 같습니다.
