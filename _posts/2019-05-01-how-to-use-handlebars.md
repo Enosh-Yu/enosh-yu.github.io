@@ -68,19 +68,19 @@ layout 파일에 아래와 같이 정의합니다.
 <!doctype html>
 <html>
 <head>
-  <title>{{title}}</title>
+  <title>{ {title} }</title>
 
   <link rel='stylesheet' href='/css/style.css'>
 
-  {{{block "stylesheets"}}}
+  { { {block "stylesheets"} } }
 </head>
 <body>
-  body: {{{body}}}
+  body: { { {body} } }
 
   <hr/>
   post body
   <hr/>
-  {{{block "scripts"}}}
+  { { {block "scripts"} } }
 </body>
 </html>
 ```
@@ -88,15 +88,16 @@ layout 파일에 아래와 같이 정의합니다.
 layout 적용된 view 파일에는 아래와 같이 사용합니다.
 
 ```
-{{#extend "stylesheets"}}
+{ {#extend "stylesheets"} }
 <link rel="stylesheet" href="/css/index.css"/>
-{{/extend}}
+{ {/extend} }
 
 let the magic begin
 
-{{#extend "scripts"}}
+{ {#extend "scripts"} }
 <script>
   document.write('foo bar!');
 </script>
-{{/extend}}
+{ {/extend} }
 ```
+(중괄호가 한 칸씩 띄어쓰는 걸로 되어 있는데, 붙여써야 합니다. 마크다운에서 붙여쓰니까 특수문자로 인식이 되어 나오지게 않네요-,-;;)
