@@ -40,6 +40,8 @@ handlebars는 기본 layout 기능만 제공합니다.
 hbs github 에 예제가 나와 있어서 그대로 사용합니다.
 
 {% highlight ruby %}
+#app.js
+var hbs  = require('hbs');
 var blocks = {};
 
 hbs.registerHelper('extend', function(name, context) {
@@ -65,31 +67,31 @@ layout 파일에 아래와 같이 정의합니다.
 <!doctype html>
 <html>
 <head>
-  <title>{{title}}</title>
+  <title>{ {title} }</title>
 
   <link rel='stylesheet' href='/css/style.css'>
 
-  {{{block "stylesheets"}}}
+  { { {block "stylesheets"} } }
 </head>
 <body>
-  body: {{{body}}}
+  body: { { {body} } }
 
   <hr/>
   post body
   <hr/>
-  {{{block "scripts"}}}
+  { { {block "scripts"} } }
 </body>
 </html>
 {% endhighlight %}
 layout 적용된 view 파일에는 아래와 같이 사용합니다.
 {% highlight ruby %}
-{{#extend "stylesheets"}}
+{ {#extend "stylesheets"} }
 <link rel="stylesheet" href="/css/index.css"/>
-{{/extend}}
+{ {/extend} }
 
 let the magic begin
 
-{{#extend "scripts"}}
+{ {#extend "scripts"} }
 <script>
   document.write('foo bar!');
 </script>
