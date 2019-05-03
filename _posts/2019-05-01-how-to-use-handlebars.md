@@ -63,37 +63,40 @@ hbs.registerHelper('block', function(name) {
 {% endhighlight %}
 
 layout 파일에 아래와 같이 정의합니다.
-{% highlight ruby %}
+
+```
 <!doctype html>
 <html>
 <head>
-  <title>{ {title} }</title>
+  <title>{{title}}</title>
 
   <link rel='stylesheet' href='/css/style.css'>
 
-  { { {block "stylesheets"} } }
+  {{{block "stylesheets"}}}
 </head>
 <body>
-  body: { { {body} } }
+  body: {{{body}}}
 
   <hr/>
   post body
   <hr/>
-  { { {block "scripts"} } }
+  {{{block "scripts"}}}
 </body>
 </html>
-{% endhighlight %}
+```
+
 layout 적용된 view 파일에는 아래와 같이 사용합니다.
-{% highlight ruby %}
-{ {#extend "stylesheets"} }
+
+```
+{{#extend "stylesheets"}}
 <link rel="stylesheet" href="/css/index.css"/>
-{ {/extend} }
+{{/extend}}
 
 let the magic begin
 
-{ {#extend "scripts"} }
+{{#extend "scripts"}}
 <script>
   document.write('foo bar!');
 </script>
 {{/extend}}
-{% endhighlight %}
+```
