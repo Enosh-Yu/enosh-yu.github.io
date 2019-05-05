@@ -72,8 +72,7 @@ hbs.registerHelper('block', function(name) {
 
 layout 파일에 아래와 같이 정의합니다.
 
-{% highlight ruby %}
-
+```
 <!doctype html>
 <html>
 <head>
@@ -92,13 +91,11 @@ layout 파일에 아래와 같이 정의합니다.
   { { {block "scripts"} } }
 </body>
 </html>
-
-{% endhighlight %}
+```
 
 layout 적용된 view 파일에는 아래와 같이 사용합니다.
 
-{% highlight ruby %}
-
+```
 { {#extend "stylesheets"} }
 <link rel="stylesheet" href="/css/index.css"/>
 { {/extend} }
@@ -110,8 +107,7 @@ let the magic begin
   document.write('foo bar!');
 </script>
 { {/extend} }
-
-{% endhighlight %}
+```
 
 (중괄호가 한 칸씩 띄어쓰는 걸로 되어 있는데, 붙여써야 합니다. 마크다운에서 붙여쓰니까 특수문자로 인식이 되어 나오지게 않네요-,-;;)
 
@@ -120,21 +116,17 @@ let the magic begin
 템플릿 안에서 변수를 사용하려면 app.render() 함수로 변수를 전달해야 합니다.
 템플릿 안에서는 다음과 같이 중괄호를 사용하면 됩니다.
 
-
-{% highlight ruby %}
-
+```
 <!doctype html>
 <html>
 <head>
   <title>{ {title} }</title>
 </head>
-
-{% endhighlight %}
+```
 
 HTML태그는 escape 되기 때문에 HTML을 사용하려면 중괄호 3개를 겹쳐서 사용합니다.
 
-{% highlight ruby %}
-
+```
 <!doctype html>
 <html>
 <head>
@@ -144,8 +136,7 @@ HTML태그는 escape 되기 때문에 HTML을 사용하려면 중괄호 3개를 
   { { { htmlcontents } } }
 </body>
 </html>
-
-{% endhighlight %}
+```
 
 Built-in Helper
 ===============
