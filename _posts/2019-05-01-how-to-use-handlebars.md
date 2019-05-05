@@ -141,8 +141,10 @@ Built-in Helper
 -  배열 또는 객체를 반복할 때 사용합니다.
 - each block 내부 변수로 this를 사용할 수 있으며, @index 를 사용하여 배열의 인덱스를 알 수도 있습니다. 객체인 경우 @key 를 사용하여 key값을 알 수 있습니다.
 - 객체의 배열인 경우에는 dot 연산자를 사용할 수 있습니다.
+
 ex)
-```
+
+<pre>
 { {#each array} }
   { {@index} }: { {this} }
 { {/each} }
@@ -154,7 +156,7 @@ ex)
 { {#each arrayOfObject} }
   { {this.id} } { { this.name } }
 { {/each} }
-```
+</pre>
 
 2. if block helper
 
