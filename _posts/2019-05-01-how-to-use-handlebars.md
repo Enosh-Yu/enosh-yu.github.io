@@ -143,8 +143,8 @@ Built-in Helper
 - 객체의 배열인 경우에는 dot 연산자를 사용할 수 있습니다.
 
 ex)
+{% highlight ruby %}
 
-<pre>
 { {#each array} }
   { {@index} }: { {this} }
 { {/each} }
@@ -156,7 +156,8 @@ ex)
 { {#each arrayOfObject} }
   { {this.id} } { { this.name } }
 { {/each} }
-</pre>
+
+{% endhighlight %}
 
 2. if block helper
 
