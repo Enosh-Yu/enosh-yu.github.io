@@ -114,13 +114,14 @@ let the magic begin
 ====================
 템플릿 안에서 변수를 사용하려면 app.render() 함수로 변수를 전달해야 합니다.
 템플릿 안에서는 다음과 같이 중괄호를 사용하면 됩니다.
-```
+<pre>
 <!doctype html>
 <html>
 <head>
-  <title>{ {title} }</title>
+  <title>{{title}}</title>
 </head>
-```
+</pre>
+
 HTML태그는 escape 되기 때문에 HTML을 사용하려면 중괄호 3개를 겹쳐서 사용합니다.
 
 ```
