@@ -38,11 +38,14 @@ Layout 설정
 app.set('view options', { layout: 'layouts/main' });
 {% endhighlight %}
 
-디폴트 layout 외에 다른 layout을 적용하려면, render함수에 
+디폴트 layout 외에 다른 layout을 적용하려면, render함수에 아래와 같이 layout 경로를 추가해 주면 됩니다.
+{% highlight ruby %}
+res.render('index', { title: 'Express' , layout: 'layouts/sub'});
+{% endhighlight %}
 
 handlebars는 기본 layout 기능만 제공합니다.
 다른 템플릿엔진처럼 확장해서 사용하려면 helper를 등록해서 사용하면 됩니다.
-hbs github 에 예제가 나와 있어서 그대로 사용합니다.
+hbs github 에 [예제](https://github.com/pillarjs/hbs/blob/master/examples/extend/app.js)가 나와 있어서 그대로 사용합니다.
 
 {% highlight ruby %}
 #app.js
@@ -109,8 +112,59 @@ let the magic begin
 
 템플릿 안에서의 변수 사용
 ====================
-템플릿 안에서 변수를 사용하려면 app.render() 
+템플릿 안에서 변수를 사용하려면 app.render() 함수로 변수를 전달해야 합니다.
+템플릿 안에서는 다음과 같이 중괄호를 사용하면 됩니다.
+```
+<!doctype html>
+<html>
+<head>
+  <title>{ {title} }</title>
+</head>
+```
+HTML태그는 escape 되기 때문에 HTML을 사용하려면 중괄호 3개를 겹쳐서 사용합니다.
 
+```
+<!doctype html>
+<html>
+<head>
+  <title>{ {title} }</title>
+</head>
+<body>
+  { { { htmlcontents } } }
+</body>
+</html>
+```
 
 Built-in Helper
 ===============
+1. each block helper
+-  배열 또는 객체를 반복할 때 사용합니다.
+- each block 내부 변수로 this를 사용할 수 있으며, @index 를 사용하여 배열의 인덱스를 알 수도 있습니다. 객체인 경우 @key 를 사용하여 key값을 알 수 있습니다.
+- 객체의 배열인 경우에는 dot 연산자를 사용할 수 있습니다.
+ex)
+```
+{ {#each array} }
+  { {@index} }: { {this} }
+{ {/each} }
+
+{ {#each object} }
+  { {@key} }: { {this} }
+{ {/each} }
+
+{ {#each arrayOfObject} }
+  { {this.id} } { { this.name } }
+{ {/each} }
+```
+
+2. if block helper
+
+3. unless block helper
+
+4. with block helper
+
+더보기 - https://handlebarsjs.com/builtin_helpers.html
+
+참고사이트
+========
+1. https://github.com/pillarjs/hbs
+2. https://handlebarsjs.com
