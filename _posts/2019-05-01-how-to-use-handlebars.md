@@ -2,7 +2,7 @@
 layout: post
 title:  "Handlebars 사용법"
 date:   2019-05-01 06:48:00 +0900
-categories: Express,Handlebars,Template
+categories: Handlebars
 ---
 
 nodejs 에서 많이 사용하는 템플릿 중에 handlebars 라는 것이 있습니다. express generator 에 pug와 ejs처럼 옵션으로 들어가 있습니다. (```express --hbs``` 로 프로젝트 생성) 하지만, 국내에서는 많이 사용을 하지 않는 것 같습니다.
@@ -14,7 +14,7 @@ ejs는 html 마크업을 그대로 사용할 수 있지만 레이아웃을 지�
 
 handlebars 는 레이아웃을 사용하고 html 마크업을 사용할 수 있어서 사용법만 약간 익히면 중복 작업을 많이 줄일 수 있습니다.
 
-handlebars 는 백엔드, 프론트엔드 둘 다 사용이 가능한데, 여기에서는 백엔트, 특별히 express 에서 사용하는 방법을 알아보겠습니다.
+handlebars 는 백엔드, 프론트엔드 둘 다 사용이 가능한데, 여기에서는 백엔드, 특별히 express 에서 사용하는 방법을 알아보겠습니다.
 
 설치
 ===
@@ -37,6 +37,8 @@ Layout 설정
 #app.js
 app.set('view options', { layout: 'layouts/main' });
 {% endhighlight %}
+
+디폴트 layout 외에 다른 layout을 적용하려면, render함수에 
 
 handlebars는 기본 layout 기능만 제공합니다.
 다른 템플릿엔진처럼 확장해서 사용하려면 helper를 등록해서 사용하면 됩니다.
@@ -107,6 +109,7 @@ let the magic begin
 
 템플릿 안에서의 변수 사용
 ====================
+템플릿 안에서 변수를 사용하려면 app.render() 
 
 
 Built-in Helper

@@ -2,7 +2,7 @@
 layout: post
 title:  "extends와 overwrite 지시어를 사용해서 템플릿 확장하기"
 date:   2018-06-26 13:48:00 +0900
-categories: Blade,PHP
+categories: Blade
 ---
 
 블레이드를 사용하다보면 ``@extends``를 주로 하나만 사용하지만, 가끔은 여러 개를 사용하고 싶을 때가 있습니다.
