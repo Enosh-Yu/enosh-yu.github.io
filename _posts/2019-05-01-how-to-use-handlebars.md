@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Handlebars 사용법"
-date:   2019-05-01 06:48:00 +0900
+title: "Handlebars 사용법"
+date: 2019-05-01 06:48:00 +0900
 categories: Handlebars
 ---
 
-nodejs 에서 많이 사용하는 템플릿 중에 handlebars 라는 것이 있습니다. express generator 에 pug와 ejs처럼 옵션으로 들어가 있습니다. (```express --hbs``` 로 프로젝트 생성) 하지만, 국내에서는 많이 사용을 하지 않는 것 같습니다.
-mustache 문법을 사용하고 레이아웃을 지원합니다. 
+nodejs 에서 많이 사용하는 템플릿 중에 handlebars 라는 것이 있습니다. express generator 에 pug와 ejs처럼 옵션으로 들어가 있습니다. (`express --hbs` 로 프로젝트 생성) 하지만, 국내에서는 많이 사용을 하지 않는 것 같습니다.
+mustache 문법을 사용하고 레이아웃을 지원합니다.
 
 pug는 사용하기는 편한 점이 있지만 html 기본 문법을 사용하지 않아서 디자이너와 협업이 불편하고 기존 html 마크업을 그대로 사용하기가 어렵다는 단점이 있습니다.
 
@@ -16,9 +16,9 @@ handlebars 는 레이아웃을 사용하고 html 마크업을 사용할 수 있�
 
 handlebars 는 백엔드, 프론트엔드 둘 다 사용이 가능한데, 여기에서는 백엔드, 특별히 express 에서 사용하는 방법을 알아보겠습니다.
 
-설치
-===
->(nodejs, npm, express generator 는 설치되어 있는 것을 가정합니다.)
+# 설치
+
+> (nodejs, npm, express generator 는 설치되어 있는 것을 가정합니다.)
 
 express generator를 사용하여 아래와 같이 생성합니다.
 {% highlight ruby %}
@@ -30,8 +30,8 @@ express --hbs myapp
 {% endhighlight %}
 설치가 완료되면, views 디렉토리에 error.hbs, index.hbs, layout.hbs 파일이 자동으로 생성이 됩니다.
 
-Layout 설정
-==========
+# Layout 설정
+
 디폴트 layout을 변경하려면 아래와 같이 추가합니다.
 {% highlight ruby %}
 #app.js
@@ -49,24 +49,26 @@ hbs github 에 [예제](https://github.com/pillarjs/hbs/blob/master/examples/ext
 
 {% highlight ruby %}
 #app.js
-var hbs  = require('hbs');
+var hbs = require('hbs');
 var blocks = {};
 
 hbs.registerHelper('extend', function(name, context) {
-    var block = blocks[name];
-    if (!block) {
-        block = blocks[name] = [];
-    }
+var block = blocks[name];
+if (!block) {
+block = blocks[name] = [];
+}
 
     block.push(context.fn(this)); // for older versions of handlebars, use block.push(context(this));
+
 });
 
 hbs.registerHelper('block', function(name) {
-    var val = (blocks[name] || []).join('\n');
+var val = (blocks[name] || []).join('\n');
 
     // clear the block
     blocks[name] = [];
     return val;
+
 });
 {% endhighlight %}
 
@@ -111,8 +113,8 @@ let the magic begin
 
 (중괄호가 한 칸씩 띄어쓰는 걸로 되어 있는데, 붙여써야 합니다. 마크다운에서 붙여쓰니까 특수문자로 인식이 되어 나오지게 않네요-,-;;)
 
-템플릿 안에서의 변수 사용
-====================
+# 템플릿 안에서의 변수 사용
+
 템플릿 안에서 변수를 사용하려면 app.render() 함수로 변수를 전달해야 합니다.
 템플릿 안에서는 다음과 같이 중괄호를 사용하면 됩니다.
 
@@ -138,10 +140,11 @@ HTML태그는 escape 되기 때문에 HTML을 사용하려면 중괄호 3개를 
 </html>
 ```
 
-Built-in Helper
-===============
+# Built-in Helper
+
 1. each block helper
--  배열 또는 객체를 반복할 때 사용합니다.
+
+- 배열 또는 객체를 반복할 때 사용합니다.
 - each block 내부 변수로 this를 사용할 수 있으며, @index 를 사용하여 배열의 인덱스를 알 수도 있습니다. 객체인 경우 @key 를 사용하여 key값을 알 수 있습니다.
 - 객체의 배열인 경우에는 dot 연산자를 사용할 수 있습니다.
 
@@ -149,15 +152,15 @@ ex)
 {% highlight ruby %}
 
 { {#each array} }
-  { {@index} }: { {this} }
+{ {@index} }: { {this} }
 { {/each} }
 
 { {#each object} }
-  { {@key} }: { {this} }
+{ {@key} }: { {this} }
 { {/each} }
 
 { {#each arrayOfObject} }
-  { {this.id} } { { this.name } }
+{ {this.id} } { { this.name } }
 { {/each} }
 
 {% endhighlight %}
@@ -170,7 +173,7 @@ ex)
 
 더보기 - https://handlebarsjs.com/builtin_helpers.html
 
-참고사이트
-========
+# 참고사이트 ..
+
 1. https://github.com/pillarjs/hbs
 2. https://handlebarsjs.com
