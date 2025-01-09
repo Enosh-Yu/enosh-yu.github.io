@@ -1,4 +1,14 @@
-```
+---
+layout: post
+title: "ecs-cli 예제"
+date: 2024-01-10 08:38:00 +0900
+categories: AWS
+---
+
+ecs 에서 자주 사용하는 커맨드라인 명령어 예제 모음
+
+{% highlight ruby %}
+
 ecs-cli configure profile \
     --access-key access-key \
     --secret-key secret-key \
@@ -47,4 +57,4 @@ ecs-cli compose service rm \
     --cluster-config hello-cluster-config \
     --ecs-profile ecs-profile
 	
-```
+{% endhighlight %}
